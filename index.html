@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Argie Hista — Full-Stack Dev</title>
+  <meta name="description" content="Hey, I'm John — a fresh-grad IT dev from Cebu building web and mobile apps with Laravel, Java, and modern tools. Check out what I've shipped.">
+  
+  <!-- Preconnect to Google Fonts for optimal font performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="John Argie Hista — Full-Stack Dev">
+  <meta property="og:description" content="Fresh-grad IT dev from Cebu building web and mobile apps with Laravel, Java, and modern tools.">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+  <!-- Top Navigation -->
+  <header class="top-nav" id="top-nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">
+        <div class="avatar-mark" aria-hidden="true">JH</div>
+        <div class="brand-text">
+          <span class="brand-name">John Argie Hista</span>
+          <span class="brand-tagline">Software Developer · Building Stuff That Works</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Page Sections">
+        <a href="#work" class="nav-link active" data-section="work">Projects</a>
+        <a href="#stack" class="nav-link" data-section="stack">Tools</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+
+
+
+      <!-- Hamburger toggle for mobile -->
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-nav-links">
+        <a href="#work" class="mobile-nav-link" data-section="work">Projects</a>
+        <a href="#stack" class="mobile-nav-link" data-section="stack">Tools</a>
+        <a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="main-content">
+
+    <!-- Intro -->
+    <section class="intro-section" id="intro" aria-label="Introduction">
+      <p class="hero-statement">
+        Hey — I'm <strong class="highlight-text">John</strong>. I build web and mobile apps with
+        <strong class="highlight-text">Laravel, PHP, Java, and Android</strong>.
+        Fresh BSIT grad from Cebu, shipping real projects and learning by doing.
+      </p>
+      <div class="direct-quick-links">
+        <a href="#work" class="direct-link">See what I've built ↓</a>
+      </div>
+    </section>
+
+    <!-- Featured Work -->
+    <section class="content-section" id="work" aria-label="Featured Projects">
+      <div class="section-header">
+        <span class="section-badge">01 // PROJECTS</span>
+        <h2 class="section-title">Stuff I've Built</h2>
+        <p class="section-desc">A capstone project and a personal side project — both built to solve real problems for real people.</p>
+      </div>
+
+      <div class="project-list">
+        
+        <!-- Project 1: OneTap -->
+        <article class="project-row" id="project-onetap">
+          <div class="project-row-header">
+            <div class="project-title-group">
+              <span class="project-index">01</span>
+              <div>
+                <h3 class="project-name">
+                  OneTap
+                  <span class="pill-badge live">Capstone</span>
+                </h3>
+                <p class="project-tagline">Homeowners association management platform</p>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Ggkyle/OneTap" target="_blank" rel="noopener noreferrer" class="external-link" title="Open source code repository">
+                <span>Source Code</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <p class="project-summary">
+            A web app we built as a team of 3 for our capstone. It helps homeowners association admins and officers manage their community — announcements, facilities reservations, issue reporting, and a lightweight violations tracker. We also added a chatbot so residents can find what they need without digging through menus. Separate dashboards for residents, officers, and admins.
+          </p>
+
+          <div class="project-tech-tags" aria-label="Technologies used">
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">Laravel</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">Livewire</span>
+            <span class="tech-tag">Leaflet.js</span>
+          </div>
+
+          <!-- Expandable Details -->
+          <details class="project-details">
+            <summary class="details-toggle">
+              <span>Under the hood</span>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="details-content">
+              <div class="specs-grid">
+                <div class="spec-card">
+                  <span class="spec-label">Role-Based Access</span>
+                  <p class="spec-value">Three separate dashboards (resident, officer, admin) with middleware-based role gating so each user only sees what they're supposed to.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label">Real-Time Feel</span>
+                  <p class="spec-value">Used Livewire for reactive UI updates — announcements, reservation statuses, and issue reports update without full page reloads.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label">Map Integration</span>
+                  <p class="spec-value">Leaflet.js for community map views, letting officers pin and visualize reported issues by location within the subdivision.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <!-- Project 2: Kilgi -->
+        <article class="project-row" id="project-kilgi">
+          <div class="project-row-header">
+            <div class="project-title-group">
+              <span class="project-index">02</span>
+              <div>
+                <h3 class="project-name">
+                  Kilgi
+                  <span class="pill-badge live">In Progress</span>
+                </h3>
+                <p class="project-tagline">Merchandising &amp; accounting app for vegetable vendors</p>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/janzzera/Kilgi" target="_blank" rel="noopener noreferrer" class="external-link" title="Open source code repository">
+                <span>Source Code</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <p class="project-summary">
+            An Android app I'm building for vegetable vendors who need a simple way to track their merchandise and money. You can batch-input purchases, log expenses and spoilages, then record end-of-day sales (retail or wholesale). It also tracks payables and receivables, and generates real accounting outputs — general journal, T-accounts, trial balance, income statement, owner's equity statement, and balance sheet.
+          </p>
+
+          <div class="project-tech-tags" aria-label="Technologies used">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Android Studio</span>
+            <span class="tech-tag">Jetpack Compose</span>
+            <span class="tech-tag">Room Database</span>
+          </div>
+
+          <!-- Expandable Details -->
+          <details class="project-details">
+            <summary class="details-toggle">
+              <span>Under the hood</span>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="details-content">
+              <div class="specs-grid">
+                <div class="spec-card">
+                  <span class="spec-label">Accounting Engine</span>
+                  <p class="spec-value">Built a full double-entry bookkeeping system from scratch — general journal, T-accounts, and auto-generated trial balance and financial statements.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label">Data Layer</span>
+                  <p class="spec-value">Room Database with structured DAOs for batch purchases, spoilage logs, sales records, and payables/receivables. All local, no internet needed.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label">UI</span>
+                  <p class="spec-value">Jetpack Compose for a modern declarative UI. Batch input forms, daily sales summaries, and financial statement views — all native Android.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="content-section" id="stack" aria-label="Technical Skills and Stack">
+      <div class="section-header">
+        <span class="section-badge">02 // TOOLKIT</span>
+        <h2 class="section-title">My Go-To Tools</h2>
+        <p class="section-desc">The stuff I actually reach for every day. No hype — just what works for me.</p>
+      </div>
+
+      <div class="stack-grid">
+        <div class="stack-card">
+          <h3 class="stack-category">Languages</h3>
+          <ul class="stack-items">
+            <li><strong>PHP</strong> — My main language for web. Laravel all day</li>
+            <li><strong>Java</strong> — For Android apps. Comfortable with OOP and the whole ecosystem</li>
+            <li><strong>JavaScript</strong> — DOM stuff, interactivity, and gluing things together on the frontend</li>
+          </ul>
+        </div>
+
+        <div class="stack-card">
+          <h3 class="stack-category">Frameworks &amp; Libraries</h3>
+          <ul class="stack-items">
+            <li><strong>Laravel</strong> — Eloquent, Blade, middleware, queues. The framework I know best</li>
+            <li><strong>Livewire</strong> — Reactive components without writing a ton of JS</li>
+            <li><strong>Jetpack Compose</strong> — Modern declarative UI for Android</li>
+          </ul>
+        </div>
+
+        <div class="stack-card">
+          <h3 class="stack-category">Data &amp; Tooling</h3>
+          <ul class="stack-items">
+            <li><strong>MySQL &amp; Room DB</strong> — Relational schemas for web, Room for local Android storage</li>
+            <li><strong>Git &amp; GitHub</strong> — Version control, branching, pull requests</li>
+            <li><strong>Railway &amp; Android Studio</strong> — Deploying web apps and building Android projects</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="content-section contact-section" id="contact" aria-label="Contact and Social Links">
+      <div class="contact-box">
+        <div class="contact-header">
+          <span class="section-badge">03 // SAY HI</span>
+          <h2 class="contact-title">Wanna work together? Say hi 👋</h2>
+          <p class="contact-subtext">
+            I'm looking for junior dev roles, freelance gigs, or just cool people to build things with. Don't be a stranger.
+          </p>
+        </div>
+
+        <div class="contact-links-grid">
+          <div class="contact-channel">
+            <span class="channel-label">Email</span>
+            <a href="mailto:johnhista1@gmail.com" class="channel-value email-link">johnhista1@gmail.com</a>
+          </div>
+          <div class="contact-channel">
+            <span class="channel-label">GitHub</span>
+            <a href="https://github.com/janzzera" target="_blank" rel="noopener noreferrer" class="channel-value">github.com/janzzera ↗</a>
+          </div>
+          <div class="contact-channel">
+            <span class="channel-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/john-argie-hista-670975421/" target="_blank" rel="noopener noreferrer" class="channel-value">linkedin.com/in/john-argie-hista ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="colophon">
+        <p>© 2026 John Argie Hista. Made with HTML, CSS, and vanilla JS.</p>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification for Copy Email -->
+  <div id="toast" class="toast-notification" role="status" aria-live="polite" aria-hidden="true">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+    <span>Email copied to clipboard: <strong>johnhista1@gmail.com</strong></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

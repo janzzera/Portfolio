@@ -1,15 +1,8 @@
-/**
- * Portfolio — Logic & Micro-Interactions
- * John Argie Hista — Full-Stack Dev
- */
-
 (function () {
   'use strict';
 
-  // Email constant
   const EMAIL_ADDRESS = 'johnhista1@gmail.com';
 
-  // DOM Elements
   const liveClockEl = document.getElementById('live-clock');
   const copyEmailBtn = document.getElementById('copy-email-btn');
   const toastEl = document.getElementById('toast');
@@ -22,14 +15,10 @@
 
   let toastTimeout = null;
 
-  /* --------------------------------------------------------------------------
-     1. Live Manila Clock (GMT+8)
-     -------------------------------------------------------------------------- */
   function updateLiveClock() {
     if (!liveClockEl) return;
     try {
       const now = new Date();
-      // Format to GMT+8 (Asia/Manila)
       const options = {
         timeZone: 'Asia/Manila',
         hour: '2-digit',
@@ -40,7 +29,6 @@
       const timeFormatter = new Intl.DateTimeFormat([], options);
       liveClockEl.textContent = `${timeFormatter.format(now)} GMT+8`;
     } catch (e) {
-      // Fallback
       const d = new Date();
       liveClockEl.textContent = `${String(d.getUTCHours() + 8).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')} GMT+8`;
     }
@@ -49,9 +37,6 @@
   setInterval(updateLiveClock, 1000);
   updateLiveClock();
 
-  /* --------------------------------------------------------------------------
-     2. Copy Email with Toast Feedback
-     -------------------------------------------------------------------------- */
   function showToast(message) {
     if (!toastEl) return;
     
@@ -75,7 +60,6 @@
       if (navigator.clipboard && window.isSecureContext) {
         await navigator.clipboard.writeText(EMAIL_ADDRESS);
       } else {
-        // Fallback for non-https / older contexts
         const textArea = document.createElement('textarea');
         textArea.value = EMAIL_ADDRESS;
         textArea.style.position = 'fixed';
@@ -96,11 +80,7 @@
     copyEmailBtn.addEventListener('click', copyEmailToClipboard);
   }
 
-  /* --------------------------------------------------------------------------
-     3. Keyboard Shortcuts (P = Projects, S = Stack, C = Copy Email)
-     -------------------------------------------------------------------------- */
   window.addEventListener('keydown', (e) => {
-    // Ignore if user is currently typing in an input or textarea
     if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
       return;
     }
@@ -119,9 +99,6 @@
     }
   });
 
-  /* --------------------------------------------------------------------------
-     4. Scroll-Based Nav Background
-     -------------------------------------------------------------------------- */
   function updateNavOnScroll() {
     if (!topNav) return;
     if (window.scrollY > 10) {
@@ -134,9 +111,6 @@
   window.addEventListener('scroll', updateNavOnScroll, { passive: true });
   updateNavOnScroll();
 
-  /* --------------------------------------------------------------------------
-     5. Mobile Menu Toggle
-     -------------------------------------------------------------------------- */
   function closeMobileMenu() {
     if (!mobileMenu || !mobileMenuToggle) return;
     mobileMenu.classList.remove('open');
@@ -163,16 +137,11 @@
     mobileMenuToggle.addEventListener('click', toggleMobileMenu);
   }
 
-  // Close mobile menu when a link is clicked
   mobileNavLinks.forEach((link) => {
     link.addEventListener('click', closeMobileMenu);
   });
 
-  /* --------------------------------------------------------------------------
-     6. Intersection Observer for Active Nav Section
-     -------------------------------------------------------------------------- */
   function setActiveLink(sectionId) {
-    // Update desktop nav
     navLinks.forEach((link) => {
       if (link.getAttribute('data-section') === sectionId) {
         link.classList.add('active');
@@ -181,7 +150,6 @@
       }
     });
 
-    // Update mobile nav
     mobileNavLinks.forEach((link) => {
       if (link.getAttribute('data-section') === sectionId) {
         link.classList.add('active');
@@ -212,9 +180,6 @@
     });
   }
 
-  /* --------------------------------------------------------------------------
-     7. Mutually Exclusive Project Accordions
-     -------------------------------------------------------------------------- */
   const projectDetails = document.querySelectorAll('.project-details');
   projectDetails.forEach((details) => {
     details.addEventListener('toggle', () => {
@@ -228,9 +193,6 @@
     });
   });
 
-  /* --------------------------------------------------------------------------
-     8. Screenshot Carousels
-     -------------------------------------------------------------------------- */
   document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     const track = carousel.querySelector('.carousel-track');
     const slides = carousel.querySelectorAll('.carousel-slide');
@@ -241,7 +203,6 @@
 
     if (!track || slides.length === 0) return;
 
-    // Create dots
     slides.forEach((_, i) => {
       const dot = document.createElement('button');
       dot.classList.add('carousel-dot');
@@ -254,12 +215,10 @@
     function goToSlide(index) {
       currentIndex = index;
 
-      // Update active slide
       slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === currentIndex);
       });
 
-      // Update active dot
       const dots = dotsContainer.querySelectorAll('.carousel-dot');
       dots.forEach((dot, i) => {
         dot.classList.toggle('active', i === currentIndex);

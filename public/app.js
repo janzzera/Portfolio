@@ -211,4 +211,71 @@
       sectionObserver.observe(section);
     });
   }
+
+  /* --------------------------------------------------------------------------
+     7. Mutually Exclusive Project Accordions
+     -------------------------------------------------------------------------- */
+  const projectDetails = document.querySelectorAll('.project-details');
+  projectDetails.forEach((details) => {
+    details.addEventListener('toggle', () => {
+      if (details.open) {
+        projectDetails.forEach((other) => {
+          if (other !== details && other.open) {
+            other.removeAttribute('open');
+          }
+        });
+      }
+    });
+  });
+
+  /* --------------------------------------------------------------------------
+     8. Screenshot Carousels
+     -------------------------------------------------------------------------- */
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    let currentIndex = 0;
+
+    if (!track || slides.length === 0) return;
+
+    // Create dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.classList.add('carousel-dot');
+      dot.setAttribute('aria-label', `Go to screenshot ${i + 1}`);
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function goToSlide(index) {
+      currentIndex = index;
+
+      // Update active slide
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentIndex);
+      });
+
+      // Update active dot
+      const dots = dotsContainer.querySelectorAll('.carousel-dot');
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        goToSlide(currentIndex > 0 ? currentIndex - 1 : slides.length - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        goToSlide(currentIndex < slides.length - 1 ? currentIndex + 1 : 0);
+      });
+    }
+  });
 })();

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>John Argie Hista — Full-Stack Dev</title>
-  <meta name="description" content="Hey, I'm John — a fresh-grad IT dev from Cebu building web and mobile apps with Laravel, Java, and modern tools. Check out what I've shipped.">
+  <title>John Argie Hista | Software Developer</title>
+  <meta name="description" content="Hey, I'm John, a fresh-grad IT dev from Cebu building web and mobile apps with Laravel, Java, and modern tools. Check out what I've shipped.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
   
   <link rel="stylesheet" href="styles.css">
   
-  <meta property="og:title" content="John Argie Hista — Full-Stack Dev">
+  <meta property="og:title" content="John Argie Hista | Software Developer">
   <meta property="og:description" content="Fresh-grad IT dev from Cebu building web and mobile apps with Laravel, Java, and modern tools.">
   <meta property="og:type" content="website">
 </head>
@@ -55,7 +55,7 @@
 
     <section class="intro-section" id="intro" aria-label="Introduction">
       <p class="hero-statement">
-        Hey — I'm <strong class="highlight-text">John</strong>. I build web and mobile apps with
+        Hey, I'm <strong class="highlight-text">John</strong>. I build web and mobile apps with
         <strong class="highlight-text">Laravel, PHP, Java, and Android</strong>.
         Fresh BSIT grad from Cebu, shipping real projects and learning by doing.
       </p>
@@ -68,7 +68,7 @@
       <div class="section-header">
         <span class="section-badge">01 // PROJECTS</span>
         <h2 class="section-title">Stuff I've Built</h2>
-        <p class="section-desc">A capstone project and a personal side project — both built to solve real problems for real people.</p>
+        <p class="section-desc">A capstone project and a personal side project (an Android app plus the API behind it). All built to solve real problems for real people.</p>
       </div>
 
       <div class="project-list">
@@ -94,7 +94,7 @@
           </div>
 
           <p class="project-summary">
-            A web app we built as a team of 3 for our capstone. It helps homeowners association admins and officers manage their community — announcements, facilities reservations, issue reporting, and a lightweight violations tracker. We also added a chatbot so residents can find what they need without digging through menus. Separate dashboards for residents, officers, and admins.
+            A web app we built as a team of 3 for our capstone. It helps homeowners association admins and officers manage their community: announcements, facilities reservations, issue reporting, and a lightweight violations tracker. We also added a chatbot so residents can find what they need without digging through menus. Separate dashboards for residents, officers, and admins.
           </p>
 
           <div class="project-tech-tags" aria-label="Technologies used">
@@ -119,7 +119,7 @@
                 </div>
                 <div class="spec-card">
                   <span class="spec-label">Real-Time Feel</span>
-                  <p class="spec-value">Used Livewire for reactive UI updates — announcements, reservation statuses, and issue reports update without full page reloads.</p>
+                  <p class="spec-value">Used Livewire for reactive UI updates, so announcements, reservation statuses, and issue reports update without full page reloads.</p>
                 </div>
                 <div class="spec-card">
                   <span class="spec-label">Map Integration</span>
@@ -177,7 +177,7 @@
           </div>
 
           <p class="project-summary">
-            An Android app I'm building for vegetable vendors who need a simple way to track their merchandise and money. You can batch-input purchases, log expenses and spoilages, then record end-of-day sales (retail or wholesale). It also tracks payables and receivables, and generates real accounting outputs — general journal, T-accounts, trial balance, income statement, owner's equity statement, and balance sheet.
+            An Android app I'm building for vegetable vendors who need a simple way to track their merchandise and money. You can batch-input purchases, log expenses and spoilages, then record end-of-day sales (retail or wholesale). It also tracks payables and receivables, and generates real accounting outputs: general journal, T-accounts, trial balance, income statement, owner's equity statement, and balance sheet. It works offline too. Everything you enter is saved on the phone first, then synced to the cloud database through the Kilgi API once you're back online.
           </p>
 
           <div class="project-tech-tags" aria-label="Technologies used">
@@ -185,6 +185,7 @@
             <span class="tech-tag">Android Studio</span>
             <span class="tech-tag">Jetpack Compose</span>
             <span class="tech-tag">Room Database</span>
+            <span class="tech-tag">Data Sync</span>
           </div>
 
           <details class="project-details">
@@ -196,15 +197,15 @@
               <div class="specs-grid">
                 <div class="spec-card">
                   <span class="spec-label">Accounting Engine</span>
-                  <p class="spec-value">Built a full double-entry bookkeeping system from scratch — general journal, T-accounts, and auto-generated trial balance and financial statements.</p>
+                  <p class="spec-value">Built a full double-entry bookkeeping system from scratch: general journal, T-accounts, and auto-generated trial balance and financial statements.</p>
                 </div>
                 <div class="spec-card">
-                  <span class="spec-label">Data Layer</span>
-                  <p class="spec-value">Room Database with structured DAOs for batch purchases, spoilage logs, sales records, and payables/receivables. All local, no internet needed.</p>
+                  <span class="spec-label">Offline-First Sync</span>
+                  <p class="spec-value">Room Database stores batch purchases, spoilage logs, sales records, and payables/receivables locally. Offline writes get queued and pushed to the cloud DB through the Kilgi API when the connection comes back.</p>
                 </div>
                 <div class="spec-card">
                   <span class="spec-label">UI</span>
-                  <p class="spec-value">Jetpack Compose for a modern declarative UI. Batch input forms, daily sales summaries, and financial statement views — all native Android.</p>
+                  <p class="spec-value">Jetpack Compose for a modern declarative UI. Batch input forms, daily sales summaries, and financial statement views, all native Android.</p>
                 </div>
               </div>
 
@@ -236,6 +237,56 @@
             </div>
           </details>
         </article>
+
+        <article class="project-row" id="project-kilgi-api">
+          <div class="project-row-header">
+            <div class="project-title-group">
+              <span class="project-index">03</span>
+              <div>
+                <h3 class="project-name">
+                  Kilgi API
+                  <span class="pill-badge live">In Progress</span>
+                </h3>
+                <p class="project-tagline">Backend API that powers the Kilgi Android app</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="project-summary">
+            The backend for Kilgi. It's a REST API the Android app talks to for posting and getting data from the cloud database. Whenever the app saves a purchase, sale, or expense, it ends up here and gets stored in Supabase Postgres. Requests are secured with JWT tokens, so each vendor only gets access to their own records.
+          </p>
+
+          <div class="project-tech-tags" aria-label="Technologies used">
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">.NET Web API</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+
+          <details class="project-details">
+            <summary class="details-toggle">
+              <span>Under the hood</span>
+              <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="details-content">
+              <div class="specs-grid">
+                <div class="spec-card">
+                  <span class="spec-label">REST Endpoints</span>
+                  <p class="spec-value">Built with ASP.NET Core Web API. Endpoints for posting and fetching purchases, sales, expenses, and accounting records used by the app.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label">Auth</span>
+                  <p class="spec-value">JWT token authentication. The app logs in once, gets a token, and sends it with every request so the API knows who's asking.</p>
+                </div>
+                <div class="spec-card">
+                  <span class="spec-label">Cloud DB</span>
+                  <p class="spec-value">Supabase Postgres as the cloud database. Acts as the source of truth that the Android app syncs its offline data to.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
       </div>
     </section>
 
@@ -243,34 +294,34 @@
       <div class="section-header">
         <span class="section-badge">02 // TOOLKIT</span>
         <h2 class="section-title">My Go-To Tools</h2>
-        <p class="section-desc">The stuff I actually reach for every day. No hype — just what works for me.</p>
+        <p class="section-desc">The stuff I actually reach for every day. No hype, just what works for me.</p>
       </div>
 
       <div class="stack-grid">
         <div class="stack-card">
           <h3 class="stack-category">Languages</h3>
           <ul class="stack-items">
-            <li><strong>PHP</strong> — My main language for web. Laravel all day</li>
-            <li><strong>Java</strong> — For Android apps. Comfortable with OOP and the whole ecosystem</li>
-            <li><strong>JavaScript</strong> — DOM stuff, interactivity, and gluing things together on the frontend</li>
+            <li><strong>PHP</strong>: My main language for web. Laravel all day</li>
+            <li><strong>Java</strong>: For Android apps. Comfortable with OOP and the whole ecosystem</li>
+            <li><strong>JavaScript</strong>: DOM stuff, interactivity, and gluing things together on the frontend</li>
           </ul>
         </div>
 
         <div class="stack-card">
           <h3 class="stack-category">Frameworks &amp; Libraries</h3>
           <ul class="stack-items">
-            <li><strong>Laravel</strong> — Eloquent, Blade, middleware, queues. The framework I know best</li>
-            <li><strong>Livewire</strong> — Reactive components without writing a ton of JS</li>
-            <li><strong>Jetpack Compose</strong> — Modern declarative UI for Android</li>
+            <li><strong>Laravel</strong>: Eloquent, Blade, middleware, queues. The framework I know best</li>
+            <li><strong>Livewire</strong>: Reactive components without writing a ton of JS</li>
+            <li><strong>Jetpack Compose</strong>: Modern declarative UI for Android</li>
           </ul>
         </div>
 
         <div class="stack-card">
           <h3 class="stack-category">Data &amp; Tooling</h3>
           <ul class="stack-items">
-            <li><strong>MySQL &amp; Room DB</strong> — Relational schemas for web, Room for local Android storage</li>
-            <li><strong>Git &amp; GitHub</strong> — Version control, branching, pull requests</li>
-            <li><strong>Railway &amp; Android Studio</strong> — Deploying web apps and building Android projects</li>
+            <li><strong>MySQL &amp; Room DB</strong>: Relational schemas for web, Room for local Android storage</li>
+            <li><strong>Git &amp; GitHub</strong>: Version control, branching, pull requests</li>
+            <li><strong>Railway &amp; Android Studio</strong>: Deploying web apps and building Android projects</li>
           </ul>
         </div>
       </div>

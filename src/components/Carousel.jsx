@@ -1,19 +1,12 @@
 
-function Carousel() {
+function Carousel({children}) {
+
     return (
         <div className="screenshot-carousel" data-carousel>
             <div className="carousel-label">Screenshots</div>
             <div className="carousel-viewport">
             <div className="carousel-track">
-                <div className="carousel-slide active">
-                <img src="images/onetap-1.png" alt="OneTap screenshot 1" loading="lazy"/>
-                </div>
-                <div className="carousel-slide">
-                <img src="images/onetap-2.png" alt="OneTap screenshot 2" loading="lazy"/>
-                </div>
-                <div className="carousel-slide">
-                <img src="images/onetap-3.png" alt="OneTap screenshot 3" loading="lazy"/>
-                </div>
+                {children}
             </div>
             </div>
             <div className="carousel-controls">
